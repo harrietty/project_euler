@@ -2,7 +2,7 @@ package challenge
 
 import "testing"
 
-func TestSum(t *testing.T) {
+func TestMultiplesOf3and5(t *testing.T) {
 	total := MultiplesOf3and5(49)
 	expected := 543
 	if total != expected {
