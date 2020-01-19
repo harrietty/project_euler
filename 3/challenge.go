@@ -1,5 +1,7 @@
 package challenge
 
+import common "github.com/harrietty/project_euler/helpers"
+
 // LargestPrimeFactor returns the largest prime factor of the given number
 func LargestPrimeFactor(number int) int {
 	primeFactors := []int{}
@@ -22,24 +24,9 @@ func LargestPrimeFactor(number int) int {
 func getNextPrime(n int) int {
 	i := n + 1
 	for {
-		if IsPrime(i) {
+		if common.IsPrime(i) {
 			return i
 		}
 		i++
 	}
-}
-
-// IsPrime returns true if n is a prime number
-func IsPrime(n int) bool {
-	// 1 is not considered a prime number
-	if n == 1 {
-		return false
-	}
-
-	for i := 2; i < n/2; i++ {
-		if (n % i) == 0 {
-			return false
-		}
-	}
-	return true
 }
