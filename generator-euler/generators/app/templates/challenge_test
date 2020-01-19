@@ -1,0 +1,11 @@
+package challenge
+
+import "testing"
+
+func Test<%= functionName %>(t *testing.T) {
+	actual := <%= functionName %>()
+	expected := 
+	if actual != expected {
+		t.Errorf("Test<%= functionName %> was incorrect, got: %d, want: %d.", actual, expected)
+	}
+}
